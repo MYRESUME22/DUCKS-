@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Duck Facts - MasterDucky</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: #333;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
+        }
+        header {
+            background-color: #ffeb3b;
+            color: #333;
+            padding: 15px 0;
+            text-align: center;
+            font-size: 26px;
+            position: sticky;
+            top: 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            padding: 20px;
+        }
+        .section {
+            margin-bottom: 30px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .section h2 {
+            color: #4caf50;
+            border-bottom: 2px solid #4caf50;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        .duck-image {
+            width: 100%;
+            max-width: 300px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            border: 3px solid #4caf50;
+            border-radius: 10px;
+            animation: zoomIn 2s ease-in-out;
+        }
+        @keyframes zoomIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+        .slides {
+            display: flex;
+            overflow: hidden;
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .slides img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .slide {
+            display: none;
+        }
+        .active-slide {
+            display: block;
+        }
+        .navigation {
+            text-align: center;
+            margin-top: 10px;
+        }
+        .nav-button {
+            background-color: #4caf50;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin: 0 5px;
+            transition: background-color 0.3s;
+        }
+        .nav-button:hover {
+            background-color: #45a049;
+        }
+        footer {
+            background-color: #4caf50;
+            color: #fff;
+            text-align: center;
+            padding: 15px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
+        footer a {
+            color: #ffeb3b;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .more-info {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .more-info a {
+            color: #4caf50;
+            font-weight: bold;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        .more-info a:hover {
+            color: #45a049;
+        }
+        .facts-list {
+            max-height: 300px;
+            overflow-y: auto;
+            animation: slideIn 1s ease-out;
+        }
+        @keyframes slideIn {
+            from { transform: translateY(-10px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        Duck Facts - MasterDucky
+    </header>
+
+    <div class="container">
+        <div class="section">
+            <h2>Introduction</h2>
+            <p>Ducks are fascinating creatures with a variety of interesting facts. Below you will find detailed information about ducks, divided into different sections for easy navigation.</p>
+        </div>
+
+        <div class="section">
+            <h2>Facts About Ducks</h2>
+            <div class="facts-list">
+                <ul>
+                    <li>Ducks have webbed feet which make them excellent swimmers.</li>
+                    <li>There are over 120 different species of ducks.</li>
+                    <li>Ducks can be found on every continent except Antarctica.</li>
+                    <li>Ducks have waterproof feathers due to a special oil gland located near the base of their tail.</li>
+                    <li>The average lifespan of a duck in the wild is 5-10 years.</li>
+                    <li>Ducks use their bills to filter food from the water, such as aquatic plants, insects, and small fish.</li>
+                    <li>Male ducks are called drakes, females are called hens, and baby ducks are called ducklings.</li>
+                    <li>Most ducks are migratory birds and travel long distances between their breeding and wintering grounds.</li>
+                    <li>Some ducks are capable of diving underwater to catch fish and other prey.</li>
+                    <li>Ducks have excellent vision and can see in full color.</li>
+                    <li>They are social animals and often travel in flocks or groups.</li>
+                    <li>In many species, males and females have different plumage to help them identify each other.</li>
+                    <li>Ducks have a unique quack that can be heard over long distances.</li>
+                    <li>Most ducks are omnivores and have a varied diet.</li>
+                    <li>Ducks can sleep with one eye open to stay alert for predators.</li>
+                    <li>The largest duck species is the Muscovy duck, which can weigh up to 15 pounds.</li>
+                    <li>The smallest duck species is the Green-winged Teal, which is only about 12 inches long.</li>
+                    <li>Ducks have been domesticated for thousands of years and are kept for their meat, eggs, and feathers.</li>
+                    <li>The oldest known duck fossil dates back to the Miocene epoch, about 20 million years ago.</li>
+                    <li>Duck feet are covered in special blood vessels that help them regulate their body temperature in cold water.</li>
+                    <li>Some species of ducks are known to perform elaborate courtship displays to attract mates.</li>
+                    <li>Ducks have a specialized digestive system that allows them to process a wide variety of food.</li>
+                    <li>The Mandarin duck is one of the most colorful and visually striking duck species.</li>
+                    <li>Ducks have been featured in various cultural symbols and folklore around the world.</li>
+                    <li>In addition to quacking, ducks can also make a variety of other sounds, such as whistles and grunts.</li>
+                    <li>The quack of a duck does echo, despite the popular myth that it doesn't.</li>
+                    <li>Some duck species, like the Northern Pintail, are known for their distinctive and beautiful plumage.</li>
+                    <li>Ducks have been observed using tools in the wild, such as using sticks to obtain food.</li>
+                    <li>The duck’s bill has tiny structures called lamellae that help it filter food from the water.</li>
+                    <li>Male ducks often have more colorful plumage than females, which helps them attract mates.</li>
+                    <li>Ducklings are precocial, meaning they are born with their eyes open and are able to walk shortly after hatching.</li>
+                    <li>The American Black Duck is closely related to the Mallard and can interbreed with them.</li>
+                    <li>Some duck species, like the Wood Duck, prefer to nest in tree cavities rather than on the ground.</li>
+                    <li>Ducks have been known to exhibit migratory behavior similar to other waterfowl, traveling long distances.</li>
+                    <li>In some cultures, duck is considered a delicacy and is featured prominently in traditional dishes.</li>
+                    <li>The South American Comb Duck has a distinctive comb-like structure on its bill.</li>
+                    <li>Duck feathers have been used historically for insulation in clothing and bedding.</li>
+                    <li>Domestic ducks are often bred for their meat, which is considered a gourmet food in many parts of the world.</li>
+                    <li>Ducklings are very vocal and make a variety of peeps and quacks to communicate with their mother.</li>
+                    <li>The Lesser Scaup is a diving duck known for its distinctive blue bill.</li>
+                    <li>Some duck species, like the Canvasback, are known for their exceptional diving ability.</li>
+                    <li>Ducks have a unique way of keeping their bills clean by rubbing them against each other.</li>
+                    <li>The Black Scoter is a sea duck that breeds in northern regions and migrates south for the winter.</li>
+                    <li>The Egyptian Duck is a domestic duck breed known for its distinctive white and black plumage.</li>
+                    <li>In Australia, the Pacific Black Duck is a common sight in wetland areas.</li>
+                    <li>The Common Eider is a sea duck known for its soft down feathers, which are highly prized for insulation.</li>
+                    <li>The Northern Shoveler is easily recognizable by its large, spoon-shaped bill.</li>
+                    <li>Ducks are known to form lifelong pair bonds with their mates in some species.</li>
+                    <li>The Gadwall is a medium-sized duck known for its subtle and elegant plumage.</li>
+                    <li>The Redhead is a diving duck with a distinctive red head and neck.</li>
+                    <li>The Green-winged Teal is one of the smallest and most widespread teal species.</li>
+                    <li>The Tufted Duck is known for the distinctive tuft of feathers on the top of its head.</li>
+                    <li>The Bufflehead is a small diving duck with striking black and white plumage.</li>
+                    <li>The Eurasian Wigeon is known for its distinctive whistling call and beautiful plumage.</li>
+                    <li>The Common Pochard is a diving duck known for its red head and chestnut-colored body.</li>
+                    <li>The Wood Duck is notable for its striking iridescent plumage and unique nesting habits.</li>
+                    <li>The Spectacled Eider is named for the distinctive white markings around its eyes.</li>
+                    <li>The Mandarin Duck is native to East Asia and is known for its elaborate and colorful plumage.</li>
+                    <li>The Mallard is one of the most recognizable and widespread duck species around the world.</li>
+                    <li>The Muscovy Duck is native to Central and South America and is known for its distinctive facial caruncles.</li>
+                    <li>The Hooded Merganser is a small duck with a striking, fan-shaped crest on its head.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="section">
+            <h2>Duck Images</h2>
+            <div class="slides">
+                <div class="slide active-slide">
+                    <img src="https://example.com/duck1.jpg" alt="Duck 1">
+                </div>
+                <div class="slide">
+                    <img src="https://example.com/duck2.jpg" alt="Duck 2">
+                </div>
+                <!-- Add more slides here -->
+            </div>
+            <div class="navigation">
+                <button class="nav-button" onclick="prevSlide()">Previous</button>
+                <button class="nav-button" onclick="nextSlide()">Next</button>
+            </div>
+        </div>
+
+        <div class="section more-info">
+            <h2>Learn More About Ducks</h2>
+            <p>Want to know even more about ducks? Check out these resources:</p>
+            <ul>
+                <li><a href="https://www.nhm.ac.uk/discover/dino-directory/duck.html" target="_blank">Duck Facts - Natural History Museum</a></li>
+                <li><a href="https://www.duckworld.org" target="_blank">Duck World - Everything About Ducks</a></li>
+                <li><a href="https://www.audubon.org/news/10-duck-facts-you-didnt-know" target="_blank">10 Duck Facts You Didn't Know - Audubon</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 MasterDucky | Made by Junior | <a href="https://www.example.com">More Duck Facts</a></p>
+    </footer>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.toggle('active-slide', i === index);
+            });
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        showSlide(currentSlide);
+    </script>
+</body>
+</html>
